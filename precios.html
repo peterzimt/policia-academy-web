@@ -4,10 +4,119 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Precios — Policía Academy</title>
-<meta name="description" content="Suscripción mensual a Policía Academy: 10€/mes, sin permanencia. Todo el temario, flashcards, tests y progreso." />
+<meta name="description" content="3 planes para preparar la oposición a Policía Nacional. 7 días gratis. Desde 9,99€/mes. Plan anual y Lifetime Founders disponibles." />
 <meta name="theme-color" content="#0A1A38" />
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 <link rel="stylesheet" href="/css/style.css" />
+<style>
+  /* ── Pricing grid de 3 columnas ───────────────────────── */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  @media (min-width: 860px) {
+    .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  }
+  .plan-card {
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .plan-card.featured {
+    border-color: var(--gold);
+    box-shadow: 0 12px 40px rgba(253, 184, 19, 0.18);
+    transform: translateY(-8px);
+  }
+  .plan-card.featured::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(400px 200px at 50% -20%, rgba(253,184,19,0.16), transparent 70%);
+    pointer-events: none;
+  }
+  .plan-card > * { position: relative; }
+  .plan-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .plan-tag.normal  { background: rgba(255,255,255,0.07); color: var(--text-sub); border: 1px solid var(--border); }
+  .plan-tag.popular { background: rgba(253,184,19,0.14); color: var(--gold); border: 1px solid rgba(253,184,19,0.40); }
+  .plan-tag.deal    { background: rgba(43,91,181,0.18); color: var(--navy-mid, #6B96D6); border: 1px solid rgba(43,91,181,0.40); }
+  .plan-name {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .plan-price {
+    font-size: clamp(2.4rem, 7vw, 3rem);
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 4px 0 2px;
+  }
+  .plan-price .currency { font-size: 0.55em; vertical-align: top; margin-right: 3px; }
+  .plan-price .period { font-size: 0.4em; color: var(--text-muted); font-weight: 600; }
+  .plan-savings {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .plan-sub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+  .plan-features {
+    list-style: none;
+    text-align: left;
+    margin: 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  .plan-features li {
+    padding-left: 26px;
+    position: relative;
+    font-size: 0.92rem;
+    color: var(--text-sub);
+  }
+  .plan-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-weight: 900;
+  }
+  .founders-counter {
+    background: linear-gradient(135deg, rgba(43,91,181,0.22), rgba(253,184,19,0.14));
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin: 28px auto 0;
+    max-width: 540px;
+    text-align: center;
+  }
+  .founders-counter strong { color: var(--gold); font-size: 1.05rem; }
+</style>
 </head>
 <body>
 
@@ -23,47 +132,100 @@
       <span class="brand-name">POLICÍA <span class="accent">ACADEMY</span></span>
     </a>
     <nav class="primary-nav">
+      <a href="/#metodo">Método</a>
       <a href="/#features">Funciones</a>
-      <a href="/#temario">Temario</a>
       <a href="/precios.html">Precios</a>
       <a href="/#faq">FAQ</a>
     </nav>
   </div>
 </header>
 
-<section class="hero" style="padding: 56px 0 0;">
+<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<section class="hero" style="padding: 56px 0 32px;">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Precios</span>
-      <h1>Una tarifa. Todo incluido.</h1>
-      <p class="lead">Diez euros al mes. Sin extras escondidos, sin permanencia, sin trucos. Cancelas cuando quieras desde tu Apple ID o Google Play.</p>
+      <span class="eyebrow">Precios · 3 planes</span>
+      <h1>Pruébalo 7 días. Después eliges.</h1>
+      <p class="lead">Activas el trial con tarjeta. <strong>No se cobra nada hasta el día 7.</strong> Si no te convence, cancelas y no pagas un euro. Si te quedas, eliges entre 3 planes pensados para distintos perfiles.</p>
     </div>
   </div>
 </section>
 
-<section style="padding-top: 24px;">
+<!-- ═══ PRICING GRID ═══════════════════════════════════════ -->
+<section style="padding-top: 0;">
   <div class="container">
-    <div class="pricing-card">
-      <span class="badge">SUSCRIPCIÓN MENSUAL</span>
-      <div class="price">
-        <span class="currency">€</span>10<span class="period">/mes</span>
+
+    <div class="pricing-grid">
+
+      <!-- ── MENSUAL ────────────────────────────────── -->
+      <div class="plan-card">
+        <span class="plan-tag normal">Flexible</span>
+        <div class="plan-name">Mensual</div>
+        <div class="plan-price">
+          <span class="currency">€</span>9,99<span class="period">/mes</span>
+        </div>
+        <p class="plan-sub">7 días gratis · Cancelas en 1 toque</p>
+        <ul class="plan-features">
+          <li>Los 45 temas en 3 niveles</li>
+          <li>Flashcards SRS</li>
+          <li>Quiz Final por tema</li>
+          <li>Liga semanal + reto diario</li>
+          <li>Sync entre dispositivos</li>
+          <li>Actualizaciones del temario</li>
+        </ul>
+        <a href="#apuntarme" class="btn btn-ghost btn-block btn-lg" style="margin-top: 16px;">Empezar mensual</a>
       </div>
-      <p class="price-sub">Sin permanencia · Cancela en un toque</p>
 
-      <ul class="price-features">
-        <li>Los 45 temas completos del programa oficial</li>
-        <li>Flashcards con repetición espaciada</li>
-        <li>Tests con explicación de cada respuesta</li>
-        <li>Estadísticas y progreso por tema y subtema</li>
-        <li>Liga semanal contra otros opositores</li>
-        <li>Reto diario para mantener la racha</li>
-        <li>Acceso offline al temario en PDF</li>
-        <li>Actualizaciones del temario incluidas</li>
-      </ul>
+      <!-- ── ANUAL (DESTACADO) ──────────────────────── -->
+      <div class="plan-card featured">
+        <span class="plan-tag popular">⭐ Más popular</span>
+        <div class="plan-name">Anual</div>
+        <div class="plan-price">
+          <span class="currency">€</span>89,99<span class="period">/año</span>
+        </div>
+        <p class="plan-savings">= 7,50 €/mes — Ahorra 30€</p>
+        <p class="plan-sub">7 días gratis · Renovación anual</p>
+        <ul class="plan-features">
+          <li><strong>Todo lo del mensual</strong></li>
+          <li>25% de descuento sobre mensual</li>
+          <li>Sin distracciones de pago</li>
+          <li>Te concentras en estudiar</li>
+          <li>Cancelas hasta el último día</li>
+          <li>Recomendado por opositores</li>
+        </ul>
+        <a href="#apuntarme" class="btn btn-primary btn-block btn-lg" style="margin-top: 16px;">Empezar anual →</a>
+      </div>
 
-      <a href="#apuntarme" class="btn btn-primary btn-block btn-lg">Apuntarme a la lista →</a>
-      <p style="margin-top: 14px; font-size: 0.82rem; color: var(--text-muted);">La app está en fase de acceso anticipado. Te avisaremos en cuanto abramos suscripciones.</p>
+      <!-- ── LIFETIME ─────────────────────────────── -->
+      <div class="plan-card">
+        <span class="plan-tag deal">🚀 Founders</span>
+        <div class="plan-name">Lifetime</div>
+        <div class="plan-price">
+          <span class="currency">€</span>99<span class="period"> · una vez</span>
+        </div>
+        <p class="plan-savings">Solo primeros 100 · luego 149,50€</p>
+        <p class="plan-sub">Pago único · Acceso de por vida</p>
+        <ul class="plan-features">
+          <li><strong>Todo lo del anual</strong></li>
+          <li>No vuelves a pagar nunca más</li>
+          <li>Todas las actualizaciones futuras</li>
+          <li>Próximas funciones premium</li>
+          <li>Apoyas a la app desde el día 1</li>
+          <li>Insignia de fundador</li>
+        </ul>
+        <a href="#apuntarme" class="btn btn-ghost btn-block btn-lg" style="margin-top: 16px;">Conseguir lifetime</a>
+      </div>
+
     </div>
+
+    <!-- ── Founders counter ───────────────────── -->
+    <div class="founders-counter">
+      <p style="margin: 0;">
+        🔥 <strong>Plan Founders</strong> — Limitado a los primeros 100 usuarios.<br>
+        <span style="color: var(--text-sub); font-size: 0.92rem;">Cuando se agoten, el plan Lifetime sube a 149,50€. Apúntate al formulario para ser el primero en saberlo.</span>
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -71,13 +233,13 @@
 <section id="apuntarme">
   <div class="container">
     <div class="lead-block">
-      <span class="eyebrow">Acceso anticipado</span>
-      <h2>Apúntate y sé de los primeros</h2>
-      <p>Los primeros 100 suscriptores tendrán precio fundador (7€/mes para siempre). Déjanos tu email y te avisamos el día del lanzamiento.</p>
+      <span class="eyebrow">Lista de acceso anticipado</span>
+      <h2>Apúntate antes del lanzamiento</h2>
+      <p>La app está en fase final de desarrollo. Déjanos tu email y te avisamos el día que abramos suscripciones — los suscriptores anticipados tienen prioridad para el plan Founders Lifetime (99€).</p>
 
       <!-- ════════════════════════════════════════════════════
            KLAVIYO_FORM_EMBED · sustituye este bloque por el
-           snippet de tu formulario Klaviyo.
+           snippet de tu formulario Klaviyo (Sign-up Form ID).
            ════════════════════════════════════════════════════ -->
       <div class="klaviyo-form-placeholder">
         <strong>[Formulario Klaviyo aquí]</strong><br>
@@ -92,33 +254,62 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Preguntas frecuentes</span>
-      <h2>Precio y suscripción</h2>
+      <h2>Precios, trial y planes</h2>
     </div>
 
     <div class="faq-list">
       <details class="faq-item">
-        <summary>¿Cómo se paga?</summary>
-        <div class="faq-body">A través de la suscripción in-app de Apple App Store o Google Play. Pagas con el método que ya tienes asociado a tu Apple ID o cuenta de Google. No nos das los datos de la tarjeta directamente.</div>
+        <summary>¿Cómo funciona el trial de 7 días?</summary>
+        <div class="faq-body">Eliges un plan, añades una tarjeta y empiezas a usar la app inmediatamente con acceso completo. <strong>No se cobra nada durante los 7 primeros días</strong>. Si cancelas antes del día 7, no se te carga ningún importe. Si no cancelas, el día 7 se realiza el primer cobro automático del plan que elegiste.</div>
       </details>
 
       <details class="faq-item">
-        <summary>¿Hay descuento por suscripción anual?</summary>
-        <div class="faq-body">Sí, en el lanzamiento ofreceremos un plan anual con dos meses gratis. Los suscriptores del plan mensual pueden cambiar a anual en cualquier momento.</div>
+        <summary>¿Por qué pedís tarjeta si el trial es gratis?</summary>
+        <div class="faq-body">La tarjeta asegura compromiso del usuario y permite continuidad sin fricción si decides quedarte. Si cancelas durante los 7 días, no se realiza ningún cobro. Cancelar es 1 toque desde Apple ID o Google Play.</div>
       </details>
 
       <details class="faq-item">
-        <summary>¿Hay periodo de prueba?</summary>
-        <div class="faq-body">Sí, los nuevos usuarios tienen 7 días gratis con acceso completo. Si cancelas antes, no se te cobra nada.</div>
+        <summary>¿Cómo se paga? ¿Es seguro?</summary>
+        <div class="faq-body">A través de la suscripción in-app de Apple App Store o Google Play. Pagas con el método que ya tienes asociado a tu Apple ID o cuenta de Google. <strong>No nos das los datos de la tarjeta directamente</strong> — todo va por la pasarela segura de la tienda.</div>
       </details>
 
       <details class="faq-item">
-        <summary>¿Devolvéis el dinero si no me convence?</summary>
-        <div class="faq-body">Las devoluciones se gestionan por la tienda donde te suscribiste (Apple o Google). Ambas suelen ser flexibles si pides reembolso dentro de las primeras 48 horas.</div>
+        <summary>¿Cuál es la diferencia entre los 3 planes?</summary>
+        <div class="faq-body">
+          <strong>Mensual (9,99 €/mes)</strong>: máxima flexibilidad, cancelas cuando quieras.<br><br>
+          <strong>Anual (89,99 €/año)</strong>: equivale a 7,50 €/mes (25% descuento). Para quien sabe que va a estudiar más de 9 meses.<br><br>
+          <strong>Lifetime Founders (99€ una vez)</strong>: pago único, acceso de por vida. Solo para los primeros 100 suscriptores. Después sube a 149,50€.
+        </div>
       </details>
 
       <details class="faq-item">
-        <summary>¿Tenéis tarifa para academias / grupos?</summary>
-        <div class="faq-body">Sí. Si gestionas una academia o un grupo de estudio, escríbenos a <a href="mailto:hola@policia.academy">hola@policia.academy</a> y te enviamos condiciones.</div>
+        <summary>¿Qué pasa cuando se agoten las 100 plazas del Lifetime Founders?</summary>
+        <div class="faq-body">El plan Lifetime seguirá disponible, pero al precio regular de <strong>149,50€</strong>. Las 100 plazas iniciales a 99€ no se renuevan. Si quieres asegurarte, apúntate ya a la lista de acceso anticipado.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Puedo cambiar de plan?</summary>
+        <div class="faq-body">Sí. Desde mensual puedes pasar a anual en cualquier momento. Si haces upgrade a Lifetime durante el trial o más tarde, también es posible (siempre que queden plazas Founders).</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Devolvéis el dinero si no me convence después del trial?</summary>
+        <div class="faq-body">Las devoluciones se gestionan a través de la tienda donde te suscribiste (Apple o Google). Ambas suelen ser flexibles si pides reembolso dentro de las primeras 48 horas del primer cobro. Si tienes problemas, escríbenos a hola@policia.academy y mediamos.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Qué pasa con mi progreso si cancelo?</summary>
+        <div class="faq-body">Se mantiene intacto. Cancelas, dejas de tener acceso, pero tu progreso (preguntas respondidas, temas desbloqueados, racha, puntos) queda guardado en la nube. Si vuelves en 6 meses, retomas exactamente donde lo dejaste.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Y si cambio de móvil?</summary>
+        <div class="faq-body">Tu progreso vive en Supabase (en la nube), no en el móvil. Logout en uno, login en otro — recuperas todo. Cambias de iPhone a Android — sigue funcionando.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Tenéis tarifa para academias o grupos?</summary>
+        <div class="faq-body">Sí. Si gestionas una academia o grupo de estudio (5+ personas), escríbenos a <a href="mailto:hola@policia.academy">hola@policia.academy</a> y te enviamos condiciones especiales.</div>
       </details>
     </div>
   </div>
@@ -141,8 +332,8 @@
       <div>
         <h4>Producto</h4>
         <ul>
+          <li><a href="/#metodo">Método</a></li>
           <li><a href="/#features">Funciones</a></li>
-          <li><a href="/#temario">Temario</a></li>
           <li><a href="/precios.html">Precios</a></li>
           <li><a href="/#faq">FAQ</a></li>
         </ul>
@@ -153,6 +344,7 @@
           <li><a href="/privacidad.html">Privacidad</a></li>
           <li><a href="/aviso-legal.html">Aviso legal</a></li>
           <li><a href="/cookies.html">Cookies</a></li>
+          <li><a href="/borrar-cuenta.html">Eliminar cuenta</a></li>
         </ul>
       </div>
       <div>
