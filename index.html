@@ -9,7 +9,7 @@
 
 <!-- Open Graph -->
 <meta property="og:title" content="Policía Academy — Prepara tu oposición a Policía Nacional" />
-<meta property="og:description" content="45 temas, flashcards, quizzes y seguimiento de progreso. Suscripción 10€/mes." />
+<meta property="og:description" content="45 temas, flashcards, quizzes y seguimiento de progreso. Desde 9,99€/mes · 7 días gratis · Plan Lifetime Founders." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://policia.academy/" />
 <meta property="og:image" content="https://policia.academy/assets/og-image.png" />
@@ -275,24 +275,81 @@
       <p class="lead">Tarjeta requerida para activar el trial. No se cobra nada hasta el día 7. Cancelas antes y no pagas.</p>
     </div>
 
-    <div class="pricing-card">
-      <span class="badge">DESDE</span>
-      <div class="price">
-        <span class="currency">€</span>9,99<span class="period">/mes</span>
+    <style>
+      .home-pricing-grid { display: grid; gap: 18px; max-width: 1080px; margin: 0 auto; }
+      @media (min-width: 860px) { .home-pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; } }
+      .home-plan { background: var(--surface); border: 1px solid var(--border-mid); border-radius: var(--radius-lg); padding: 26px 20px; text-align: center; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+      .home-plan.featured { border-color: var(--gold); box-shadow: 0 12px 40px rgba(253,184,19,0.18); transform: translateY(-6px); }
+      .home-plan.featured::before { content: ""; position: absolute; inset: 0; background: radial-gradient(400px 200px at 50% -20%, rgba(253,184,19,0.16), transparent 70%); pointer-events: none; }
+      .home-plan > * { position: relative; }
+      .home-tag { display: inline-block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+      .home-tag.normal  { background: rgba(255,255,255,0.07); color: var(--text-sub); border: 1px solid var(--border); }
+      .home-tag.popular { background: rgba(253,184,19,0.14); color: var(--gold); border: 1px solid rgba(253,184,19,0.40); }
+      .home-tag.deal    { background: rgba(43,91,181,0.18); color: #6B96D6; border: 1px solid rgba(43,91,181,0.40); }
+      .home-plan-name { font-size: 1.05rem; color: var(--text); margin-bottom: 6px; font-weight: 700; }
+      .home-plan-price { font-size: clamp(2.2rem, 6.5vw, 2.8rem); font-weight: 900; color: var(--text); letter-spacing: -0.03em; line-height: 1; margin: 4px 0 2px; }
+      .home-plan-price .currency { font-size: 0.55em; vertical-align: top; margin-right: 3px; }
+      .home-plan-price .period { font-size: 0.4em; color: var(--text-muted); font-weight: 600; }
+      .home-plan-savings { color: var(--gold); font-size: 0.82rem; font-weight: 700; margin: 4px 0; }
+      .home-plan-sub { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 14px; }
+      .home-plan-features { list-style: none; text-align: left; margin: 12px 0; display: flex; flex-direction: column; gap: 6px; flex: 1; padding: 0; }
+      .home-plan-features li { padding-left: 22px; position: relative; font-size: 0.88rem; color: var(--text-sub); }
+      .home-plan-features li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 900; }
+    </style>
+
+    <div class="home-pricing-grid">
+      <!-- Mensual -->
+      <div class="home-plan">
+        <span class="home-tag normal">Flexible</span>
+        <div class="home-plan-name">Mensual</div>
+        <div class="home-plan-price"><span class="currency">€</span>9,99<span class="period">/mes</span></div>
+        <p class="home-plan-sub">7 días gratis · Cancelas en 1 toque</p>
+        <ul class="home-plan-features">
+          <li>Los 45 temas en 3 niveles</li>
+          <li>Flashcards SRS + Quiz</li>
+          <li>Liga semanal y reto diario</li>
+          <li>Actualizaciones del temario</li>
+        </ul>
+        <a href="/precios.html" class="btn btn-ghost btn-block">Empezar mensual</a>
       </div>
-      <p class="price-sub">7 días gratis · Sin compromiso · Cancela cuando quieras</p>
-      <ul class="price-features">
-        <li>Los 45 temas oficiales en 3 niveles</li>
-        <li>Flashcards SRS + Quiz progresivo</li>
-        <li>Quiz Final para desbloquear cada tema</li>
-        <li>Sistema de puntos y racha diaria</li>
-        <li>Liga semanal y reto diario</li>
-        <li>Estadísticas por importancia y subtema</li>
-        <li>Sin anuncios. Sin extras escondidos.</li>
-      </ul>
-      <a href="/precios.html" class="btn btn-primary btn-block btn-lg">Ver los 3 planes →</a>
-      <p style="margin-top: 14px; font-size: 0.85rem; color: var(--text-muted);">Plan anual: 89,99 €/año (ahorra 30€) · Lifetime Founders: 99€ (primeros 100)</p>
+
+      <!-- Anual (destacado) -->
+      <div class="home-plan featured">
+        <span class="home-tag popular">⭐ Más popular</span>
+        <div class="home-plan-name">Anual</div>
+        <div class="home-plan-price"><span class="currency">€</span>89,99<span class="period">/año</span></div>
+        <p class="home-plan-savings">= 7,50 €/mes — Ahorra 30€</p>
+        <p class="home-plan-sub">7 días gratis · Renovación anual</p>
+        <ul class="home-plan-features">
+          <li><strong>Todo lo del mensual</strong></li>
+          <li>25% de descuento</li>
+          <li>Te concentras en estudiar</li>
+          <li>Recomendado por opositores</li>
+        </ul>
+        <a href="/precios.html" class="btn btn-primary btn-block">Empezar anual →</a>
+      </div>
+
+      <!-- Lifetime Founders -->
+      <div class="home-plan">
+        <span class="home-tag deal">🚀 Founders</span>
+        <div class="home-plan-name">Lifetime</div>
+        <div class="home-plan-price"><span class="currency">€</span>99<span class="period"> · pago único</span></div>
+        <p class="home-plan-savings">Solo primeros 100 · luego 149,50€</p>
+        <p class="home-plan-sub">Acceso de por vida · No renueva</p>
+        <ul class="home-plan-features">
+          <li><strong>Todo lo del anual</strong></li>
+          <li>No vuelves a pagar nunca</li>
+          <li>Todas las actualizaciones</li>
+          <li>Insignia de fundador</li>
+        </ul>
+        <a href="/precios.html" class="btn btn-ghost btn-block">Conseguir lifetime</a>
+      </div>
     </div>
+
+    <p style="text-align: center; margin-top: 18px; font-size: 0.85rem; color: var(--text-muted);">
+      Tarjeta requerida para activar el trial. No se cobra nada durante los 7 primeros días.
+      <a href="/precios.html" style="color: var(--gold);">Ver detalles de cada plan →</a>
+    </p>
   </div>
 </section>
 
