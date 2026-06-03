@@ -54,17 +54,27 @@
 </header>
 
 <!-- ═══ HERO ═════════════════════════════════════════════ -->
-<section class="hero" style="padding-top: 50px;">
-  <div class="container container-narrow">
-    <p class="eyebrow" style="color: var(--gold);">🧠 EL MÉTODO QUE SÍ FUNCIONA</p>
-    <h1>Memorizas el temario <span class="accent">sin re-leerlo</span>.<br>Con 30 min al día.</h1>
-    <p class="lead">
-      Spaced Repetition System (SRS) — el método con <strong>140 años de investigación científica</strong> que usan Anki,
-      Duolingo, los médicos para preparar el MIR, los pilotos para licencias y ahora tú, para tu oposición a Policía Nacional.
-    </p>
-    <div class="cta-row" style="margin-top: 24px;">
-      <a href="https://alumno.policia.academy" class="btn btn-primary btn-lg">⚡ Probarlo ahora</a>
-      <a href="#como-funciona" class="btn btn-ghost btn-lg">↓ Cómo funciona</a>
+<section class="hero hero-with-image" style="padding-top: 50px;">
+  <div class="container hero-split">
+    <div class="hero-text">
+      <p class="eyebrow" style="color: var(--gold);">🧠 EL MÉTODO QUE SÍ FUNCIONA</p>
+      <h1>Memorizas el temario <span class="accent">sin re-leerlo</span>.<br>Con 30 min al día.</h1>
+      <p class="lead">
+        Spaced Repetition System (SRS) — el método con <strong>140 años de investigación científica</strong> que usan Anki,
+        Duolingo, los médicos para preparar el MIR, los pilotos para licencias y ahora tú, para tu oposición a Policía Nacional.
+      </p>
+      <div class="cta-row" style="margin-top: 24px;">
+        <a href="https://alumno.policia.academy" class="btn btn-primary btn-lg">⚡ Probarlo ahora</a>
+        <a href="#como-funciona" class="btn btn-ghost btn-lg">↓ Cómo funciona</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=900&q=80&auto=format&fit=crop"
+        alt="Visualización del cerebro y conexiones neuronales — método SRS"
+        loading="eager"
+        width="900" height="600"
+      />
     </div>
   </div>
 </section>
@@ -352,6 +362,27 @@
 <style>
 .container-narrow { max-width: 760px; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hero split (texto + imagen) */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 980px) {
+  .hero-split { grid-template-columns: 1.2fr 1fr; gap: 56px; }
+  .hero-image { order: 2; }
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 1px solid var(--border-mid);
+  display: block;
+}
+.hero-text { min-width: 0; }
 
 /* Charts */
 .chart-figure {

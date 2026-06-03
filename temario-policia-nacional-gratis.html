@@ -108,25 +108,35 @@
 </header>
 
 <!-- ═══ HERO ═════════════════════════════════════════════ -->
-<section class="hero" style="padding-top: 50px;">
-  <div class="container">
-    <p class="eyebrow" style="color: var(--gold);">📖 TEMARIO OFICIAL · ESCALA BÁSICA CNP</p>
-    <h1>Temario Policía Nacional <span class="accent">GRATIS</span>.<br>Los 45 temas oficiales, actualizados a 2026.</h1>
-    <p class="lead">
-      El temario completo de la oposición a Policía Nacional (Escala Básica) <strong>sin pagar nada, sin registro</strong>.
-      Lo que sigue es el programa oficial que verás en el examen.
-    </p>
-    <p class="lead" style="margin-top: 14px; color: var(--text-sub);">
-      ¿Sólo leerlo? Te aburrirás y no se te quedará nada. Por eso después <strong>te acompañamos del 0 al 100</strong>
-      con quizzes inteligentes, flashcards con repetición espaciada, retos diarios y liga semanal — para que sí, esta vez, apruebes.
-    </p>
-    <div class="cta-row">
-      <a href="#temario-completo" class="btn btn-primary btn-lg">📖 Ver los 45 temas</a>
-      <a href="https://alumno.policia.academy" class="btn btn-secondary btn-lg">⚡ Empezar a estudiar</a>
+<section class="hero hero-with-image" style="padding-top: 50px;">
+  <div class="container hero-split">
+    <div class="hero-text">
+      <p class="eyebrow" style="color: var(--gold);">📖 TEMARIO OFICIAL · ESCALA BÁSICA CNP</p>
+      <h1>Temario Policía Nacional <span class="accent">GRATIS</span>.<br>Los 45 temas oficiales, actualizados a 2026.</h1>
+      <p class="lead">
+        El temario completo de la oposición a Policía Nacional (Escala Básica) <strong>sin pagar nada, sin registro</strong>.
+        Lo que sigue es el programa oficial que verás en el examen.
+      </p>
+      <p class="lead" style="margin-top: 14px; color: var(--text-sub);">
+        ¿Sólo leerlo? Te aburrirás y no se te quedará nada. Por eso después <strong>te acompañamos del 0 al 100</strong>
+        con quizzes inteligentes, flashcards con repetición espaciada, retos diarios y liga semanal — para que sí, esta vez, apruebes.
+      </p>
+      <div class="cta-row">
+        <a href="#temario-completo" class="btn btn-primary btn-lg">📖 Ver los 45 temas</a>
+        <a href="https://alumno.policia.academy" class="btn btn-secondary btn-lg">⚡ Empezar a estudiar</a>
+      </div>
+      <p style="margin-top: 14px; color: var(--text-muted); font-size: 0.9rem;">
+        Sin tarjeta para leer el temario · App de pago opcional desde 9,99 €/mes
+      </p>
     </div>
-    <p style="margin-top: 14px; color: var(--text-muted); font-size: 0.9rem;">
-      Sin tarjeta para leer el temario · App de pago opcional desde 9,99 €/mes
-    </p>
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=900&q=80&auto=format&fit=crop"
+        alt="Pila de libros y notas — preparación oposición Policía Nacional"
+        loading="eager"
+        width="900" height="600"
+      />
+    </div>
   </div>
 </section>
 
@@ -620,6 +630,38 @@
 /* Container narrow para artículos largos */
 .container-narrow {
   max-width: 760px;
+}
+
+/* Hero con imagen split — en desktop 2 columnas, en móvil stacked */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 980px) {
+  .hero-split { grid-template-columns: 1.2fr 1fr; gap: 56px; }
+  .hero-image { order: 2; }
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 1px solid var(--border-mid);
+  display: block;
+}
+.hero-text { min-width: 0; }
+
+/* Mejor responsive del listado temas 1-/2-/3-columnas según viewport */
+@media (min-width: 980px) {
+  .temas-list { grid-template-columns: repeat(3, 1fr); column-gap: 16px; }
+}
+.temas-list li {
+  /* Mantén altura uniforme para que se vean alineados */
+  display: flex;
+  align-items: center;
+  min-height: 44px;
 }
 </style>
 

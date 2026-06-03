@@ -41,22 +41,32 @@
 </header>
 
 <!-- ═══ HERO ═══════════════════════════════════════════════ -->
-<section class="hero">
-  <div class="container">
-    <span class="eyebrow">Oposición Policía Nacional · Escala Básica</span>
-    <h1>Apruebas la oposición.<br><span class="accent">Sin morir en el intento.</span></h1>
-    <p class="lead">
-      Te llevamos del 0 al aprobado con un método probado: temario gratis, quizzes inteligentes,
-      flashcards de repetición espaciada y liga semanal. <strong>Estudias 30-60 min al día, no 8 los sábados.</strong>
-    </p>
-    <div class="hero-cta-row">
-      <a href="/temario-policia-nacional-gratis.html" class="btn btn-primary btn-lg">📖 Ver temario gratis</a>
-      <a href="https://alumno.policia.academy" class="btn btn-ghost btn-lg">⚡ Empezar a estudiar</a>
+<section class="hero hero-with-image">
+  <div class="container hero-split">
+    <div class="hero-text">
+      <span class="eyebrow">Oposición Policía Nacional · Escala Básica</span>
+      <h1>Apruebas la oposición.<br><span class="accent">Sin morir en el intento.</span></h1>
+      <p class="lead">
+        Te llevamos del 0 al aprobado con un método probado: temario gratis, quizzes inteligentes,
+        flashcards de repetición espaciada y liga semanal. <strong>Estudias 30-60 min al día, no 8 los sábados.</strong>
+      </p>
+      <div class="hero-cta-row">
+        <a href="/temario-policia-nacional-gratis.html" class="btn btn-primary btn-lg">📖 Ver temario gratis</a>
+        <a href="https://alumno.policia.academy" class="btn btn-ghost btn-lg">⚡ Empezar a estudiar</a>
+      </div>
+      <div class="hero-meta">
+        <span>📖 Temario gratis · sin tarjeta</span>
+        <span>App desde 9,99 €/mes</span>
+        <span>iOS · Android · Web</span>
+      </div>
     </div>
-    <div class="hero-meta">
-      <span>📖 Temario gratis · sin tarjeta</span>
-      <span>App desde 9,99 €/mes</span>
-      <span>iOS · Android · Web</span>
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=80&auto=format&fit=crop"
+        alt="Opositora estudiando con libros y portátil — Policía Academy"
+        loading="eager"
+        width="900" height="600"
+      />
     </div>
   </div>
 </section>
@@ -282,6 +292,27 @@
 /* Container narrow + cta-row helper (compartido con otras páginas) */
 .container-narrow { max-width: 760px; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hero split (texto + imagen) */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 980px) {
+  .hero-split { grid-template-columns: 1.2fr 1fr; gap: 56px; }
+  .hero-image { order: 2; }
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 1px solid var(--border-mid);
+  display: block;
+}
+.hero-text { min-width: 0; }
 </style>
 
 <script src="/js/main.js" defer></script>
