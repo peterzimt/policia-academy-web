@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Método SRS · Cómo memorizas el temario sin re-leerlo · Policía Academy</title>
+<meta name="description" content="El sistema de repetición espaciada (SRS) que usan Anki, Duolingo y los médicos para memorizar oposiciones. Vence la curva del olvido con 30 min al día. Aplicado al temario de Policía Nacional." />
+<meta name="keywords" content="metodo SRS, repeticion espaciada, curva del olvido, ebbinghaus, memorizar temario policia, estudiar oposicion policia nacional" />
+<meta name="theme-color" content="#0A1A38" />
+<link rel="canonical" href="https://policia.academy/metodo-srs.html" />
+
+<meta property="og:title" content="Método SRS para oposición Policía Nacional · cómo memorizas sin re-leer" />
+<meta property="og:description" content="La ciencia detrás del aprobado: 140 años de investigación, aplicada al temario." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://policia.academy/metodo-srs.html" />
+<meta property="og:image" content="https://policia.academy/assets/og-image.png" />
+
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="stylesheet" href="/css/style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Método SRS para oposición Policía Nacional",
+  "description": "Sistema de repetición espaciada aplicado al temario de la Escala Básica del CNP. Cómo funciona y por qué triplica tu retención.",
+  "image": "https://policia.academy/assets/og-image.png",
+  "author": { "@type": "Organization", "name": "Policía Academy" },
+  "publisher": { "@type": "Organization", "name": "Policía Academy", "url": "https://policia.academy" }
+}
+</script>
+</head>
+<body class="has-sticky-cta">
+
+<!-- ═══ HEADER ═════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="Policía Academy">
+      <svg class="logo" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M30 14 L40 8 L50 14 L60 8 L70 14 L66 22 L34 22 Z" fill="#FDB813"/>
+        <path d="M22 26 L78 26 L78 60 Q78 84 50 100 Q22 84 22 60 Z" fill="#1C3158" stroke="#FDB813" stroke-width="2"/>
+        <circle cx="50" cy="58" r="14" fill="#FDB813" opacity=".95"/>
+        <path d="M44 58 L48 64 L58 50" stroke="#0A1A38" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">POLICÍA <span class="accent">ACADEMY</span></span>
+    </a>
+    <nav class="primary-nav">
+      <a href="/temario-policia-nacional-gratis.html">📖 Temario gratis</a>
+      <a href="/metodo-srs.html" aria-current="page"><strong>🧠 Método SRS</strong></a>
+      <a href="/precios.html">Precios</a>
+      <a href="https://alumno.policia.academy" class="btn btn-primary">Empezar →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══ HERO ═════════════════════════════════════════════ -->
+<section class="hero" style="padding-top: 50px;">
+  <div class="container container-narrow">
+    <p class="eyebrow" style="color: var(--gold);">🧠 EL MÉTODO QUE SÍ FUNCIONA</p>
+    <h1>Memorizas el temario <span class="accent">sin re-leerlo</span>.<br>Con 30 min al día.</h1>
+    <p class="lead">
+      Spaced Repetition System (SRS) — el método con <strong>140 años de investigación científica</strong> que usan Anki,
+      Duolingo, los médicos para preparar el MIR, los pilotos para licencias y ahora tú, para tu oposición a Policía Nacional.
+    </p>
+    <div class="cta-row" style="margin-top: 24px;">
+      <a href="https://alumno.policia.academy" class="btn btn-primary btn-lg">⚡ Probarlo ahora</a>
+      <a href="#como-funciona" class="btn btn-ghost btn-lg">↓ Cómo funciona</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EL PROBLEMA · CURVA DEL OLVIDO ════════════════════ -->
+<section style="background: var(--bg-2);">
+  <div class="container container-narrow">
+    <span class="eyebrow">El problema</span>
+    <h2>La curva del olvido de Ebbinghaus</h2>
+    <p>
+      En 1885, el psicólogo alemán Hermann Ebbinghaus descubrió algo que arruina la vida del opositor medio:
+      <strong>olvidamos el 70 % de lo que estudiamos en 24 horas, y el 90 % en una semana</strong>. Sin repaso, da igual cuántas horas le metas el lunes —
+      el sábado ya no te acuerdas.
+    </p>
+
+    <!-- Gráfico SVG curva del olvido SIN repaso -->
+    <figure class="chart-figure">
+      <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="curve-title">
+        <title id="curve-title">Curva del olvido de Ebbinghaus sin repaso — la retención cae a 30 % en 24h y a 10 % en 1 semana</title>
+        <!-- Ejes -->
+        <line x1="60" y1="240" x2="580" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <line x1="60" y1="40" x2="60" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <!-- Y labels -->
+        <text x="50" y="50" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">100%</text>
+        <text x="50" y="100" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">75%</text>
+        <text x="50" y="150" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">50%</text>
+        <text x="50" y="200" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">25%</text>
+        <text x="50" y="244" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">0%</text>
+        <!-- X labels -->
+        <text x="60" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">0h</text>
+        <text x="190" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">20min</text>
+        <text x="320" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">1h</text>
+        <text x="450" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">24h</text>
+        <text x="580" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">1 semana</text>
+        <!-- Curva del olvido (exponencial cayendo) -->
+        <path d="M 60 50 Q 130 80 190 130 Q 270 180 320 200 Q 400 220 450 225 Q 520 230 580 232" fill="none" stroke="#E24B4A" stroke-width="3"/>
+        <!-- Etiqueta de la curva -->
+        <text x="200" y="100" fill="#E24B4A" font-size="13" font-weight="700">Sin repaso → todo perdido</text>
+      </svg>
+      <figcaption>Fuente: Ebbinghaus, "Über das Gedächtnis" (1885). Replicado en estudios modernos: Murre & Dros 2015.</figcaption>
+    </figure>
+
+    <p>
+      Por eso a la mayoría de opositores les pasa lo mismo: estudian el Tema 1 en septiembre, lo "saben" en septiembre,
+      llegan a abril y no se acuerdan de nada. Vuelven a empezar. Y otra vez. Y otra. Total: 3 años para una oposición que se aprueba en 8 meses.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ LA SOLUCIÓN · SRS ════════════════════════════════ -->
+<section id="como-funciona">
+  <div class="container container-narrow">
+    <span class="eyebrow">La solución</span>
+    <h2>Spaced Repetition: vencer el olvido con repasos en el momento exacto</h2>
+    <p>
+      La idea es simple: <strong>justo antes de olvidar algo, te lo vuelven a mostrar</strong>. Y entonces la curva sube otra vez,
+      pero esta vez la siguiente bajada es más lenta. Repaso tras repaso, la información pasa de memoria de trabajo a memoria a largo plazo.
+    </p>
+
+    <!-- Gráfico SVG curva CON repasos espaciados -->
+    <figure class="chart-figure">
+      <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="srs-title">
+        <title id="srs-title">Curva del olvido con repasos espaciados — cada repaso restaura la retención al 100 % y la siguiente bajada es más lenta</title>
+        <!-- Ejes -->
+        <line x1="60" y1="240" x2="580" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <line x1="60" y1="40" x2="60" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <!-- Y labels -->
+        <text x="50" y="50" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">100%</text>
+        <text x="50" y="150" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">50%</text>
+        <text x="50" y="244" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">0%</text>
+        <!-- X labels (escala días) -->
+        <text x="60" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">Día 1</text>
+        <text x="160" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">Día 2</text>
+        <text x="290" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">Día 5</text>
+        <text x="430" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">Día 14</text>
+        <text x="555" y="262" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">Día 45</text>
+        <!-- Curva 1: estudio inicial, cae a 50% en día 2 -->
+        <path d="M 60 50 Q 100 100 160 145" fill="none" stroke="#FDB813" stroke-width="2.5"/>
+        <!-- Marker día 2: repaso, salta a 100% -->
+        <line x1="160" y1="145" x2="160" y2="50" stroke="#1D9E75" stroke-width="2" stroke-dasharray="4 3"/>
+        <circle cx="160" cy="50" r="5" fill="#1D9E75"/>
+        <!-- Curva 2: cae más lento a 60% en día 5 -->
+        <path d="M 160 50 Q 220 90 290 120" fill="none" stroke="#FDB813" stroke-width="2.5"/>
+        <line x1="290" y1="120" x2="290" y2="50" stroke="#1D9E75" stroke-width="2" stroke-dasharray="4 3"/>
+        <circle cx="290" cy="50" r="5" fill="#1D9E75"/>
+        <!-- Curva 3: cae aún más lento a 70% en día 14 -->
+        <path d="M 290 50 Q 360 75 430 95" fill="none" stroke="#FDB813" stroke-width="2.5"/>
+        <line x1="430" y1="95" x2="430" y2="50" stroke="#1D9E75" stroke-width="2" stroke-dasharray="4 3"/>
+        <circle cx="430" cy="50" r="5" fill="#1D9E75"/>
+        <!-- Curva 4: muy plana en día 45, ya casi memorizado -->
+        <path d="M 430 50 Q 510 60 580 75" fill="none" stroke="#FDB813" stroke-width="2.5"/>
+        <!-- Línea horizontal del 90% que se "alcanza" -->
+        <line x1="60" y1="70" x2="580" y2="70" stroke="rgba(29,158,117,0.3)" stroke-width="1" stroke-dasharray="3 5"/>
+        <text x="570" y="66" fill="#1D9E75" font-size="11" text-anchor="end" font-weight="700">90 % retención sostenida</text>
+        <!-- Leyenda -->
+        <text x="80" y="200" fill="#FDB813" font-size="12" font-weight="700">— Curva natural de olvido</text>
+        <text x="80" y="220" fill="#1D9E75" font-size="12" font-weight="700">● Repaso (cada uno más espaciado)</text>
+      </svg>
+      <figcaption>Cada repaso (círculos verdes) restaura la memoria al 100 %. El siguiente intervalo es más largo: 1 día → 3 días → 9 días → 30 días → 90 días.</figcaption>
+    </figure>
+
+    <p>
+      El truco: el algoritmo decide cuándo te toca repasar cada concepto. Tú no piensas — solo abres la app, contestas 10-20 cartas, cierras la app.
+      <strong>30 minutos al día contra 4-6 horas de re-lectura</strong>. Misma retención al examen. Pero tú llegas con energía y sin odiar el temario.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ INTERVALOS LEITNER · CÓMO LO APLICAMOS ════════════ -->
+<section style="background: var(--bg-2);">
+  <div class="container container-narrow">
+    <span class="eyebrow">Cómo lo aplicamos</span>
+    <h2>Sistema Leitner adaptado a oposiciones CNP</h2>
+    <p>
+      Cada concepto del temario (artículo, fecha, principio, definición) es una flashcard. Empieza en la caja 1.
+      Cada vez que la aciertas, sube de caja y tardas más en volver a verla. Si la fallas, vuelve a la caja 1.
+    </p>
+
+    <div class="leitner-grid">
+      <div class="leitner-box leitner-box-1">
+        <div class="leitner-num">1</div>
+        <div class="leitner-info">
+          <strong>Caja nueva</strong>
+          <span>Mañana</span>
+        </div>
+      </div>
+      <div class="leitner-arrow">→</div>
+      <div class="leitner-box leitner-box-2">
+        <div class="leitner-num">2</div>
+        <div class="leitner-info">
+          <strong>Caja repaso</strong>
+          <span>3 días</span>
+        </div>
+      </div>
+      <div class="leitner-arrow">→</div>
+      <div class="leitner-box leitner-box-3">
+        <div class="leitner-num">3</div>
+        <div class="leitner-info">
+          <strong>Caja consolidación</strong>
+          <span>7 días</span>
+        </div>
+      </div>
+      <div class="leitner-arrow">→</div>
+      <div class="leitner-box leitner-box-4">
+        <div class="leitner-num">4</div>
+        <div class="leitner-info">
+          <strong>Caja largo plazo</strong>
+          <span>21 días</span>
+        </div>
+      </div>
+      <div class="leitner-arrow">→</div>
+      <div class="leitner-box leitner-box-5">
+        <div class="leitner-num">5</div>
+        <div class="leitner-info">
+          <strong>Memorizado</strong>
+          <span>60 días</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px;">
+      Si en cualquier momento fallas una carta, vuelve a la caja 1. <strong>Lo que sabes bien se ve poco. Lo que te cuesta, mucho.</strong>
+      No pierdes 5 minutos repasando "el Tribunal Supremo está en Madrid" si ya te lo sabes — lo dedicas al artículo 24 que se te resiste.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ QUIÉN MÁS LO USA ═════════════════════════════════ -->
+<section>
+  <div class="container container-narrow">
+    <span class="eyebrow">No nos lo hemos inventado</span>
+    <h2>El SRS lleva décadas funcionando en estudios serios</h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-icon">🏥</div>
+        <h3>Médicos del MIR</h3>
+        <p>Las academias top del MIR (la oposición más dura de España) llevan 20+ años usando flashcards SRS. Es estándar.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">🦉</div>
+        <h3>Duolingo · 500M usuarios</h3>
+        <p>El algoritmo de palabras de Duolingo es básicamente SRS. Por eso aprendes idiomas con 5 min al día y se te quedan.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">🧠</div>
+        <h3>Anki · 30 años</h3>
+        <p>La app más usada del mundo para memorizar — desde piloto a estudiantes de Harvard. Es la herramienta de referencia académica.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">📜</div>
+        <h3>140 años de papers</h3>
+        <p>Desde Ebbinghaus (1885) hasta meta-análisis de Cepeda et al. (2008). La ciencia es contundente: SRS triplica retención vs estudio masivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ POR QUÉ NUESTRO SRS ES MEJOR PARA TU OPO ════════ -->
+<section style="background: var(--bg-2);">
+  <div class="container container-narrow">
+    <span class="eyebrow">Lo que añadimos</span>
+    <h2>¿Por qué no usas Anki entonces?</h2>
+    <p>
+      Buena pregunta. Anki es gratis. Pero tienes que <strong>crear tú las flashcards</strong> — y con 5.681 conceptos del temario CNP, son meses de trabajo solo para preparar las cartas.
+      Más decidir qué subir de caja, qué bajar, qué reformular. Más sincronizar dispositivos. Más mantener una colección actualizada cuando cambia el BOE.
+    </p>
+    <p>
+      Aquí ya está todo hecho:
+    </p>
+    <ul class="feature-list">
+      <li><strong>900+ flashcards ya creadas</strong> por cada tema del CNP, revisadas por opositores.</li>
+      <li><strong>Algoritmo Leitner integrado</strong> en la app — el contador de cajas, los intervalos, la cola del día.</li>
+      <li><strong>Sincronización iOS / Android / web</strong> automática vía Supabase. Empiezas en el bus, terminas en casa.</li>
+      <li><strong>Actualizaciones del temario</strong> cuando cambia el BOE — automático para ti, no tienes que rehacer nada.</li>
+      <li><strong>Quizzes tipo test combinados</strong> con el SRS — no solo flashcards, también 5.681 preguntas con 3 opciones formato examen real.</li>
+      <li><strong>Liga semanal + reto diario</strong> para que no abandones la app cuando se complica. La motivación social funciona.</li>
+    </ul>
+    <p>
+      Si tienes 6 meses para perder configurando Anki y creando flashcards desde cero, hazlo — el método es el mismo. Si no, <strong>los 9,99 €/mes te ahorran 200 horas de logística</strong> y te dejan estudiar.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══════════════════════════════════════ -->
+<section>
+  <div class="container container-narrow" style="text-align: center;">
+    <h2>Pruébalo en 30 segundos</h2>
+    <p class="lead">
+      Acceso inmediato desde el navegador. No instalas nada. Si no te gusta, te devolvemos el dinero los primeros 14 días sin preguntar.
+    </p>
+    <div class="cta-row" style="justify-content: center; margin-top: 24px;">
+      <a href="https://alumno.policia.academy" class="btn btn-primary btn-lg">⚡ Empezar ahora</a>
+      <a href="/temario-policia-nacional-gratis.html" class="btn btn-secondary btn-lg">📖 Ver temario gratis</a>
+    </div>
+    <p style="margin-top: 14px; color: var(--text-muted); font-size: 0.9rem;">
+      Desde 9,99 €/mes · 89,99 €/año (ahorra 30 €) · iOS, Android y web
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand">
+          <svg class="logo" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M30 14 L40 8 L50 14 L60 8 L70 14 L66 22 L34 22 Z" fill="#FDB813"/>
+            <path d="M22 26 L78 26 L78 60 Q78 84 50 100 Q22 84 22 60 Z" fill="#1C3158" stroke="#FDB813" stroke-width="2"/>
+            <circle cx="50" cy="58" r="14" fill="#FDB813" opacity=".95"/>
+          </svg>
+          <span class="brand-name">POLICÍA <span class="accent">ACADEMY</span></span>
+        </a>
+        <p style="margin-top: 14px; font-size: 0.88rem;">Preparación independiente para opositores a Policía Nacional.</p>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/temario-policia-nacional-gratis.html">Temario gratis</a></li>
+          <li><a href="/metodo-srs.html">Método SRS</a></li>
+          <li><a href="/precios.html">Precios</a></li>
+          <li><a href="https://alumno.policia.academy">Estudiar online</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacidad.html">Privacidad</a></li>
+          <li><a href="/aviso-legal.html">Aviso legal</a></li>
+          <li><a href="/cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="disclaimer">© 2026 Policía Academy. Plataforma independiente.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile -->
+<div class="sticky-cta">
+  <a href="https://alumno.policia.academy" class="btn btn-primary btn-block">⚡ Probarlo ahora →</a>
+</div>
+
+<style>
+.container-narrow { max-width: 760px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Charts */
+.chart-figure {
+  margin: 28px 0;
+  padding: 28px 18px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-mid);
+  border-radius: 14px;
+}
+.chart-figure svg { width: 100%; height: auto; }
+.chart-figure figcaption {
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Leitner boxes */
+.leitner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 22px;
+}
+.leitner-box {
+  flex: 1 1 130px;
+  min-width: 130px;
+  background: var(--surface);
+  border: 2px solid var(--border-mid);
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+.leitner-box-1 { border-color: rgba(226,75,74,0.5); }
+.leitner-box-2 { border-color: rgba(251,146,60,0.5); }
+.leitner-box-3 { border-color: rgba(253,184,19,0.5); }
+.leitner-box-4 { border-color: rgba(140,224,180,0.5); }
+.leitner-box-5 { border-color: rgba(29,158,117,0.7); background: rgba(29,158,117,0.08); }
+.leitner-num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.leitner-info { display: flex; flex-direction: column; gap: 2px; }
+.leitner-info strong { color: var(--text); font-size: 0.92rem; }
+.leitner-info span { color: var(--text-sub); font-size: 0.82rem; }
+.leitner-arrow {
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  font-weight: 300;
+  flex: 0;
+}
+@media (max-width: 580px) {
+  .leitner-arrow { transform: rotate(90deg); margin: -4px 0; }
+}
+
+/* Proof cards */
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+@media (min-width: 720px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
+.proof-card {
+  background: var(--surface);
+  border: 1px solid var(--border-mid);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.proof-icon { font-size: 2rem; flex-shrink: 0; }
+.proof-card h3 { margin: 0 0 6px; color: var(--text); font-size: 1.05rem; }
+.proof-card p { margin: 0; color: var(--text-sub); font-size: 0.92rem; line-height: 1.5; }
+
+/* Feature list (bullets con check) */
+.feature-list { list-style: none; padding: 0; margin: 18px 0; }
+.feature-list li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  color: var(--text-sub);
+  line-height: 1.55;
+}
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: var(--green, #1D9E75);
+  font-weight: 900;
+}
+.feature-list li strong { color: var(--text); }
+</style>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
