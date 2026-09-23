@@ -237,14 +237,20 @@
       <h2>Apúntate antes del lanzamiento</h2>
       <p>La app está en fase final de desarrollo. Déjanos tu email y te avisamos el día que abramos suscripciones — los suscriptores anticipados tienen prioridad para el plan Founders Lifetime (99€).</p>
 
-      <!-- ════════════════════════════════════════════════════
-           KLAVIYO_FORM_EMBED · sustituye este bloque por el
-           snippet de tu formulario Klaviyo (Sign-up Form ID).
-           ════════════════════════════════════════════════════ -->
-      <div class="klaviyo-form-placeholder">
-        <strong>[Formulario Klaviyo aquí]</strong><br>
-        Sustituye este div por el embed de Klaviyo.
-      </div>
+      <form class="klaviyo-form" novalidate>
+        <div class="klaviyo-fields">
+          <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" />
+          <input type="email" name="email" placeholder="Tu email" autocomplete="email" required />
+          <input type="tel" name="telefono" placeholder="Móvil (opcional · avisos por WhatsApp)" autocomplete="tel" />
+          <button type="submit" class="btn btn-primary btn-lg">Apuntarme a la lista →</button>
+          <p class="klaviyo-status" role="status" aria-live="polite"></p>
+          <p class="klaviyo-legal">Sin spam. Te escribimos para avisarte del lanzamiento y darte plan de estudio. Puedes darte de baja cuando quieras. <a href="/privacidad.html">Política de privacidad</a>.</p>
+        </div>
+        <div class="klaviyo-done" hidden>
+          <p class="klaviyo-done-title">✅ ¡Estás dentro!</p>
+          <p>Te avisaremos por email en cuanto abramos suscripciones — con prioridad para el plan <strong>Founders Lifetime</strong>. Mientras, ya puedes <a href="https://alumno.policia.academy">empezar con el temario gratis</a>.</p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -371,5 +377,6 @@
 </div>
 
 <script src="/js/main.js" defer></script>
+<script src="/js/klaviyo.js" defer></script>
 </body>
 </html>

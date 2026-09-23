@@ -431,6 +431,30 @@ section {
 
 .klaviyo-form-placeholder strong { color: var(--gold); }
 
+/* Formulario Klaviyo real */
+.klaviyo-form { max-width: 460px; margin: 0 auto; }
+.klaviyo-fields { display: flex; flex-direction: column; gap: 12px; }
+.klaviyo-form input {
+  width: 100%;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color .15s ease;
+}
+.klaviyo-form input::placeholder { color: var(--text-muted); }
+.klaviyo-form input:focus { outline: none; border-color: var(--gold); }
+.klaviyo-form button[type="submit"] { width: 100%; margin-top: 4px; }
+.klaviyo-status { min-height: 0; font-size: 0.9rem; margin: 0; }
+.klaviyo-status.is-error { color: #ff9b9b; }
+.klaviyo-legal { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin: 6px 0 0; }
+.klaviyo-legal a { color: var(--text-sub); text-decoration: underline; }
+.klaviyo-done { text-align: center; }
+.klaviyo-done-title { color: var(--gold); font-weight: 800; font-size: 1.15rem; margin-bottom: 8px; }
+
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--border);
