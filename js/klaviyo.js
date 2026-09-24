@@ -39,6 +39,17 @@
     var g = function (n) { var f = form.querySelector('[name="' + n + '"]'); return f ? f.value.trim() : ''; };
     var email = g('email'), name = g('nombre'), phone = g('telefono');
 
+    // Anti-spam: honeypot. Un humano nunca ve ni rellena "empresa".
+    // Si viene relleno, fingimos éxito y no llamamos a la API.
+    if (g('empresa')) {
+      form.classList.add('is-done');
+      var doneHp = form.querySelector('.klaviyo-done');
+      if (doneHp) { doneHp.hidden = false; }
+      var fieldsHp = form.querySelector('.klaviyo-fields');
+      if (fieldsHp) { fieldsHp.hidden = true; }
+      return;
+    }
+
     if (!EMAIL_RE.test(email)) { setStatus(form, 'Introduce un email válido.', 'error'); return; }
 
     var attrs = { email: email };
