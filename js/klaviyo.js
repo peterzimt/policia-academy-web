@@ -7,7 +7,7 @@
 
    Formularios propios (con el diseño del sitio):
      <form class="klaviyo-form" data-kl="origen"> con inputs name="nombre|email|telefono"
-     y un honeypot name="empresa". El teléfono es obligatorio.
+     y un honeypot name="pa_hp". El teléfono es obligatorio.
    Además: pop-up del temario que se abre a los 35 s o al 55 % de scroll, una vez por
    visita, y con cualquier elemento [data-temario]. */
 (function () {
@@ -73,9 +73,10 @@
 
   function wire(fm, origen) {
     // Honeypot: si no existe en el HTML, se añade.
-    if (!fm.querySelector('input[name=empresa]')) {
+    if (!fm.querySelector('input[name=pa_hp]')) {
       var miel = document.createElement('input');
-      miel.name = 'empresa'; miel.tabIndex = -1; miel.autocomplete = 'off'; miel.setAttribute('aria-hidden', 'true');
+      miel.name = 'pa_hp'; miel.tabIndex = -1; miel.autocomplete = 'off'; miel.setAttribute('aria-hidden', 'true');
+      miel.setAttribute('data-lpignore', 'true'); miel.setAttribute('data-1p-ignore', ''); miel.setAttribute('data-form-type', 'other');
       miel.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0';
       fm.appendChild(miel);
     }
@@ -86,7 +87,7 @@
     fm.addEventListener('submit', function (e) {
       e.preventDefault();
       // Trampa de miel: un campo que una persona no ve y un robot sí rellena.
-      var trampa = fm.querySelector('input[name=empresa]');
+      var trampa = fm.querySelector('input[name=pa_hp]');
       if (trampa && trampa.value) { showSuccess(fm, msg); return; }
 
       var em = fm.querySelector('input[type=email], input[name=email]');
