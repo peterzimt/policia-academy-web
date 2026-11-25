@@ -26,9 +26,9 @@
 <link rel="stylesheet" href="/css/style.css" />
 
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[
-{"@type":"Book","name":"Psicotécnicos Policía Nacional 1. El método","inLanguage":"es","bookFormat":"https://schema.org/Paperback","author":{"@type":"Organization","name":"Policía Academy"},"url":"https://www.amazon.es/dp/B0HMP6YNGY"},
-{"@type":"Book","name":"Psicotécnicos Policía Nacional 2. Entrenamiento","inLanguage":"es","bookFormat":"https://schema.org/Paperback","author":{"@type":"Organization","name":"Policía Academy"},"url":"https://www.amazon.es/dp/B0HMNYKFYT"},
-{"@type":"Book","name":"Psicotécnicos Policía Nacional 3. Exámenes","inLanguage":"es","bookFormat":"https://schema.org/Paperback","author":{"@type":"Organization","name":"Policía Academy"},"url":"https://www.amazon.es/dp/B0HNGPM8VG"},
+{"@type":"Book","name":"Psicotécnicos Policía Nacional 1. El método","inLanguage":"es","bookFormat":"https://schema.org/Paperback","author":{"@type":"Organization","name":"Policía Academy"},"image":"https://policia.academy/assets/libros/psico-1.jpg","url":"https://www.amazon.es/dp/B0HMP6YNGY"},
+{"@type":"Book","name":"Psicotécnicos Policía Nacional 2. Entrenamiento","inLanguage":"es","bookFormat":"https://schema.org/Paperback","author":{"@type":"Organization","name":"Policía Academy"},"image":"https://policia.academy/assets/libros/psico-2.jpg","url":"https://www.amazon.es/dp/B0HMNYKFYT"},
+{"@type":"Book","name":"Psicotécnicos Policía Nacional 3. Exámenes","inLanguage":"es","bookFormat":"https://schema.org/Paperback","author":{"@type":"Organization","name":"Policía Academy"},"image":"https://policia.academy/assets/libros/psico-3.jpg","url":"https://www.amazon.es/dp/B0HNGPM8VG"},
 {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://policia.academy/"},{"@type":"ListItem","position":2,"name":"Libros","item":"https://policia.academy/libros.html"}]}
 ]}</script>
 
@@ -42,14 +42,9 @@
   }
   .libro-card:hover { transform: translateY(-3px); border-color: var(--gold); }
   .libro-cover {
-    height: 160px; border-radius: 12px; margin-bottom: 18px; position: relative; overflow: hidden;
-    background: linear-gradient(135deg, #12244A, #0A1A38);
-    border: 1px solid rgba(253,184,19,.3);
-    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 14px;
+    width: 100%; height: auto; display: block; border-radius: 10px; margin-bottom: 18px;
+    border: 1px solid var(--border-mid); box-shadow: 0 12px 34px rgba(0,0,0,.42);
   }
-  .libro-cover::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: var(--gold); }
-  .libro-num { font-size: 2.4rem; font-weight: 900; color: var(--gold); line-height: 1; }
-  .libro-cover small { color: var(--text-sub); font-size: .72rem; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 8px; }
   .libro-tag { font-size: .72rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold); }
   .libro-card h3 { margin: 6px 0 8px; font-size: 1.15rem; color: var(--text); }
   .libro-card p { color: var(--text-sub); font-size: .92rem; line-height: 1.5; margin: 0 0 18px; flex: 1; }
@@ -95,7 +90,7 @@
     <div class="libros-grid">
 
       <a class="libro-card" href="https://www.amazon.es/dp/B0HMP6YNGY" target="_blank" rel="noopener">
-        <div class="libro-cover"><span class="libro-num">1</span><small>El método</small></div>
+        <img class="libro-cover" src="/assets/libros/psico-1.jpg" alt="Portada de Psicotécnicos Policía Nacional 1 · El método" width="720" height="932" loading="lazy" />
         <span class="libro-tag">Empieza por aquí</span>
         <h3>1 · El método</h3>
         <p>Cada tipo de pregunta del psicotécnico de la Escala Básica, explicado y con la estrategia para resolverlo rápido: codificación, alfabeto, conteo, verbal, lógica y cálculo. Más las FAQ de la prueba (formato, penalización, nota mínima).</p>
@@ -103,7 +98,7 @@
       </a>
 
       <a class="libro-card" href="https://www.amazon.es/dp/B0HMNYKFYT" target="_blank" rel="noopener">
-        <div class="libro-cover"><span class="libro-num">2</span><small>Entrenamiento</small></div>
+        <img class="libro-cover" src="/assets/libros/psico-2.jpg" alt="Portada de Psicotécnicos Policía Nacional 2 · Entrenamiento" width="720" height="932" loading="lazy" />
         <span class="libro-tag">Repetición</span>
         <h3>2 · Entrenamiento</h3>
         <p>Cientos de ejercicios por tipo, de menos a más, para automatizar cada mecánica. El psicotécnico no se aprende: se entrena hasta que los patrones te salen solos y ganas segundos en cada pregunta.</p>
@@ -111,7 +106,7 @@
       </a>
 
       <a class="libro-card" href="https://www.amazon.es/dp/B0HNGPM8VG" target="_blank" rel="noopener">
-        <div class="libro-cover"><span class="libro-num">3</span><small>Exámenes</small></div>
+        <img class="libro-cover" src="/assets/libros/psico-3.jpg" alt="Portada de Psicotécnicos Policía Nacional 3 · Exámenes" width="720" height="932" loading="lazy" />
         <span class="libro-tag">Simulacro real</span>
         <h3>3 · Exámenes</h3>
         <p>Ómnibus de 40 preguntas cronometrados, con el mismo formato, mezcla y penalización que el examen real. Para medir tu nota, acostumbrarte al reloj y llegar al tribunal sin sorpresas.</p>
